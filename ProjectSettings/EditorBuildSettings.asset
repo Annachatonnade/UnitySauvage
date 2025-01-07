@@ -4,5 +4,18 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/R310_TP1 - correction/Assets/Scenes/MainMenu.unity
+    guid: 014e851fab7b4ca45833e7a190cee4bd
+  - enabled: 1
+    path: Assets/R310_TP1 - correction/Assets/Scenes/ENDscene.unity
+    guid: ecbcabdc6b0ca7e4aad514c831d77515
+  - enabled: 1
+    path: Assets/R310_TP1 - correction/Assets/Scenes/ChronoMode.unity
+    guid: 90458040c9ca8a044962b3d2e070c039
+  - enabled: 1
+    path: Assets/R310_TP1 - correction/Assets/Scenes/RushMode.unity
+    guid: 469943dc30abe0141ac69872c92932a0
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

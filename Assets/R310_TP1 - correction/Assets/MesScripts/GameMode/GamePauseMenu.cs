@@ -10,6 +10,7 @@ public class GamePauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            isPaused = !isPaused;
             if (isPaused)
             {
                 ResumeGame();
@@ -40,4 +41,5 @@ public class GamePauseMenu : MonoBehaviour
         Time.timeScale = 1f; // Reprendre le temps avant de retourner au menu principal
         SceneManager.LoadScene("MainMenu");
     }
+
 }

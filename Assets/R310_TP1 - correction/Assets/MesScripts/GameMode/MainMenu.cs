@@ -5,12 +5,12 @@ public class MainMenu : MonoBehaviour
 {
     public void StartRushMode()
     {
-        SceneManager.LoadScene("../Scenes/RushMode");     // Chargez la scène associée au mode Rush
+        SceneManager.LoadScene("RushMode");     // Chargez la scène associée au mode Rush
     }
 
     public void StartChronoMode()
     {
-        SceneManager.LoadScene("../Scenes/ChronoMode");   // Chargez la scène associée au mode Contre la montre
+        SceneManager.LoadScene("ChronoMode");   // Chargez la scène associée au mode Contre la montre
     }
 
     public void QuitGame()

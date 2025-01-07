@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 2359104}
   - component: {fileID: 3313442307395238052}
   m_Layer: 0
-  m_Name: Veh_Ute_Red_Z_Ghost
+  m_Name: Ghost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
