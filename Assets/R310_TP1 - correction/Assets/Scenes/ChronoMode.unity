@@ -645,7 +645,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 396, y: 406}
+  m_AnchoredPosition: {x: 396, y: 283.1}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &702311712
@@ -1210,9 +1210,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1061707243}
-  - component: {fileID: 1061707244}
+  - component: {fileID: 1061707245}
   m_Layer: 0
-  m_Name: DistanceManager
+  m_Name: Ghost_DistanceManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1233,7 +1233,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1061707244
+--- !u!114 &1061707245
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1242,11 +1242,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1061707242}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9e7150bc271bd94b93aacd446eecba6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ebba7c2a8473264cb2cd21bd7a445ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   distanceText: {fileID: 702311712}
-  bestRecordText: {fileID: 563148793}
+  bestRecordsText: {fileID: 563148793}
   player: {fileID: 1261280190}
 --- !u!1 &1083101101
 GameObject:
@@ -2199,7 +2199,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 396, y: 343.9}
+  m_AnchoredPosition: {x: 396, y: 220.99997}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1875740753
@@ -2222,7 +2222,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Temps restant : 0 s'
+  m_text: 'Temps restant : 90 s'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
