@@ -1,11 +1,14 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ChronoModeManager : MonoBehaviour
 {
     public Transform player;                     // Référence au joueur
     public Transform ghostPrefab;                // Préfabriqué pour le fantôme
-    public float chronoTime = 10f;               // Durée de la course en secondes
+    public TextMeshProUGUI TimeText;
+    public float chronoTime;                     // Durée de la course en secondes
+    
     private List<Vector3> ghostPositions;        // Liste des positions du fantôme
     private float elapsedTime = 0f;              // Temps écoulé pour la course
     private bool isChronoActive = false;         // Indique si le chrono est actif
@@ -20,6 +23,7 @@ public class ChronoModeManager : MonoBehaviour
     {
         ghostPositions = new List<Vector3>();
         bestGhostPositions = new List<Vector3>();
+        TimeText.text = "Temps restant : " + chronoTime.ToString("F1") + " s";
 
         // Charger les positions du meilleur score précédent (si disponibles)
         LoadBestGhost();

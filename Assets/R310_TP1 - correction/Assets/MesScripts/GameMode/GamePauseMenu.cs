@@ -3,14 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class GamePauseMenu : MonoBehaviour
 {
-    public GameObject pauseMenuUI; // Panel du menu de pause
+    public GameObject pauseMenu; // Panel du menu de pause
     private bool isPaused = false;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Escape)) // Appuie sur Échap
         {
-            isPaused = !isPaused;
             if (isPaused)
             {
                 ResumeGame();
@@ -22,18 +21,18 @@ public class GamePauseMenu : MonoBehaviour
         }
     }
 
-    public void ResumeGame()
-    {
-        pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f; // Reprendre le temps
-        isPaused = false;
-    }
-
     public void PauseGame()
     {
-        pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f; // Arrêter le temps
         isPaused = true;
+        pauseMenu.SetActive(true); // Affiche le menu pause
+        Time.timeScale = 0f;      // Met le jeu en pause
+    }
+
+    public void ResumeGame()
+    {
+        isPaused = false;
+        pauseMenu.SetActive(false); // Cache le menu pause
+        Time.timeScale = 1f;        // Reprend le jeu
     }
 
     public void ReturnToMainMenu()
