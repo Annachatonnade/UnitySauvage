@@ -1204,7 +1204,6 @@ MonoBehaviour:
   ghost: {fileID: 1196536790}
   gameDuration: 60
   recordingRate: 0.1
-  ghostStartingY: -10
 --- !u!1 &1083101101
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,22 +1399,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.0027770996
-      value: -0.0031433105
-      inSlope: 0.61634433
-      outSlope: 0.61634433
+      time: -0.011135101
+      value: -0.018920898
+      inSlope: 0.015537436
+      outSlope: 0.015537436
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.12465315
+      outWeight: 0.20110317
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 1.3858174
-      outSlope: 1.3858174
+      inSlope: 2.7907813
+      outSlope: 2.7907813
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.080332406
+      inWeight: 0.038888816
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -1872,6 +1871,11 @@ MonoBehaviour:
     obst: {fileID: 5924013827781158161, guid: cdcb19fde9e8cba40b7bff849baf2c1b, type: 3}
   trsfParentObst: {fileID: 1614018214}
   increasePeriod: 10
+  bonusObject: {fileID: 1990293589767515956, guid: 367149bd17c4d4d4e8868ec6a5cf8d45, type: 3}
+  initialBonusProba: 0.3
+  bonusSpeedIncrease: 5
+  treeObject: {fileID: 919132149155446097, guid: 5c276c627fa22404aaf962ecb832a552, type: 3}
+  treeSpacing: 20
 --- !u!1 &1833039719
 GameObject:
   m_ObjectHideFlags: 0
