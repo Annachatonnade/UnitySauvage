@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
@@ -11,9 +12,9 @@ public class AutoDestructWhenUseless : MonoBehaviour
 
     void Update()
     {
-        if ((player.position.z - transform.position.z) > maxDist)
+        if ((player.position.z - transform.position.z) > maxDist+10)
             Destroy(this.gameObject);
-
+        //Debug.Log("Valeur reçue : " + maxDist);
     }
 
 }

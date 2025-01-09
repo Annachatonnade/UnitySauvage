@@ -16,6 +16,5 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();                     // Ferme l'application
-        Debug.Log("Game Quit");                 // Fonctionne uniquement dans la build
     }
 }
