@@ -19,15 +19,14 @@ public class Ghost_DistanceManager : MonoBehaviour
     [Header("Game Settings")]
     [SerializeField] private float gameDuration;
     [SerializeField] private float recordingRate;
-    [SerializeField] private float ghostStartingY = -10f; 
-     
+    
+    private float ghostStartingY = -10f;
     private float remainingTime;
     private Vector3 spawnPoint;
     private float currentDistance = 0f;
     private float[] bestRecords = new float[3];
     private bool isGameActive = false;
-    private bool hasPlayedBefore = false;
-    private bool FirstGame = true;
+    //private bool hasPlayedBefore = false;
     private Vector3 recordStartPosition;
 
     // Ghost recording system
@@ -64,13 +63,6 @@ public class Ghost_DistanceManager : MonoBehaviour
 
     private void Start()
     {
-        //if (FirstGame)
-        //{
-        //    FirstGame = !FirstGame;
-        //    InitializeRecords();
-        //    ghostStartingY = -10f;
-        //}
-        //ghostStartingY = 0f;
         LoadBestRecords();
         LoadBestRun();
         InitializeGame();
@@ -86,38 +78,40 @@ public class Ghost_DistanceManager : MonoBehaviour
         currentRunData.Add(new PositionData(player.position, gameDuration - remainingTime));
     }
 
-    private void InitializeRecords()
-    {
-        // Vérifie si c'est la première fois que le jeu est lancé
-        hasPlayedBefore = PlayerPrefs.HasKey("HasPlayedBefore");
+    //private void InitializeRecords()
+    //{
+    //    // Vérifie si c'est la première fois que le jeu est lancé
+    //    hasPlayedBefore = PlayerPrefs.HasKey("HasPlayedBefore");
 
-        if (!hasPlayedBefore)
-        {
-            // Première initialisation
-            for (int i = 0; i < bestRecords.Length; i++)
-            {
-                bestRecords[i] = 0f;
-                PlayerPrefs.SetFloat($"BestRecord_{i}", 0f);
-            }
-            PlayerPrefs.SetInt("HasPlayedBefore", 1);
-            PlayerPrefs.Save();
+    //    if (!hasPlayedBefore)
+    //    {
+    //        currentRunData.Clear();
+    //        bestRunData.Clear();
+    //        // Première initialisation
+    //        for (int i = 0; i < bestRecords.Length; i++)
+    //        {
+    //            bestRecords[i] = 0f;
+    //            PlayerPrefs.SetFloat($"BestRecord_{i}", 0f);
+    //        }
+    //        PlayerPrefs.SetInt("HasPlayedBefore", 1);
+    //        PlayerPrefs.Save();
 
-            // Place le ghost sous la route
-            if (ghost != null)
-            {
-                Vector3 ghostPos = ghost.position;
-                ghostPos.y = ghostStartingY;
-                ghost.position = ghostPos;
-            }
-        }
-        else
-        {
-            // Charge les records existants
-            ghostStartingY = 0f;
-            LoadBestRecords();
-            LoadBestRun();
-        }
-    }
+    //        // Place le ghost sous la route
+    //        if (ghost != null)
+    //        {
+    //            Vector3 ghostPos = ghost.position;
+    //            ghostPos.y = ghostStartingY;
+    //            ghost.position = ghostPos;
+    //        }
+    //    }
+    //    else
+    //    {
+    //        // Charge les records existants
+    //        ghostStartingY = 0f;
+    //        LoadBestRecords();
+    //        LoadBestRun();
+    //    }
+    //}
 
     private void Update()
     {
@@ -152,9 +146,9 @@ public class Ghost_DistanceManager : MonoBehaviour
     private void EndGame()
     {
         isGameActive = false;
-        ghost.position = new Vector3( ghost.position.x, -10f, ghost.position.z);
+        ghost.position = new Vector3(ghost.position.x, -10f, ghost.position.z);
         player.rotation = Quaternion.Euler(player.rotation.eulerAngles.x, 0f, player.rotation.eulerAngles.z);
-        
+
         // Vérifie si on a battuplayer.transform.rotation.y un record
         if (currentDistance > bestRecords[0])
         {
