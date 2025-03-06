@@ -12,7 +12,7 @@ public class AutoDestructWhenUseless : MonoBehaviour
 
     void Update()
     {
-        if ((player.position.z - transform.position.z) > maxDist+10)
+        if ((player.position.z - transform.position.z) > maxDist + 10)
             Destroy(this.gameObject);
         //Debug.Log("Valeur reçue : " + maxDist);
     }

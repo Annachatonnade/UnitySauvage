@@ -6,7 +6,7 @@ using UnityEngine;
 public class CreateStaticRoad : MonoBehaviour
 {
 
-    [Tooltip("le pattern de  route ")] 
+    [Tooltip("le pattern de  route ")]
     public GameObject pattern;
     [Tooltip("Nombre total de pattern de route ")]
     [Range(10, 30)]

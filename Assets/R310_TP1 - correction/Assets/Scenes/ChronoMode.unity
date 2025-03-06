@@ -1869,13 +1869,12 @@ MonoBehaviour:
     obst: {fileID: 8780424320546655309, guid: 71782582b9d2cac4cba5251a3b767d13, type: 3}
   - proba: 30
     obst: {fileID: 5924013827781158161, guid: cdcb19fde9e8cba40b7bff849baf2c1b, type: 3}
+  - proba: 10
+    obst: {fileID: 919132149155446097, guid: 5c276c627fa22404aaf962ecb832a552, type: 3}
+  - proba: 50
+    obst: {fileID: 8860985810429976817, guid: 54b1cdf5224c4f44298ea6af711e1c26, type: 3}
   trsfParentObst: {fileID: 1614018214}
   increasePeriod: 10
-  bonusObject: {fileID: 1990293589767515956, guid: 367149bd17c4d4d4e8868ec6a5cf8d45, type: 3}
-  initialBonusProba: 0.3
-  bonusSpeedIncrease: 5
-  treeObject: {fileID: 919132149155446097, guid: 5c276c627fa22404aaf962ecb832a552, type: 3}
-  treeSpacing: 20
 --- !u!1 &1833039719
 GameObject:
   m_ObjectHideFlags: 0
